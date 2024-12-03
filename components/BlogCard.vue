@@ -1,5 +1,5 @@
 <template>
-  <div class="cursor-pointer group/blogcard">
+  <div class="cursor-pointer group/blogcard animation-appear">
     <!--handle image-->
     <div class="rounded-xl object-cover h-[250px] w-full mb-3 overflow-hidden">
       <img
