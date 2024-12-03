@@ -1,11 +1,13 @@
 <template>
   <div>
     <!--handle image-->
-    <div class="rounded-xl object-cover h-[250px] w-full mb-3 overflow-hidden">
+    <div
+      class="rounded-xl object-cover h-[250px] w-full mb-3 overflow-hidden group/blogimage"
+    >
       <img
         :src="props.blogImage"
         alt="blog image"
-        class="object-cover h-[250px] w-full"
+        class="object-cover h-[250px] w-full group-hover/blogimage:scale-125 duration-300 transition ease-in-out"
       />
     </div>
     <!--handle blog content-->
