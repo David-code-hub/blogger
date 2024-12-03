@@ -1,12 +1,12 @@
 <template>
   <div class="w-full grid grid-cols-5 pr-24 mx-auto gap-12">
     <div
-      class="col-span-2 h-full border-r pl-24 border-slate-100 pt-20 bg-gray-50 h-screen sticky top-0"
+      class="col-span-2 h-full border-r pl-24 border-slate-100 pt-12 bg-gray-50 h-screen sticky top-0"
     >
       <!--additional blog content eg filter,search,categories-->
       <HomeSidebar />
     </div>
-    <div class="col-span-3">
+    <div class="col-span-3 pb-12">
       <!--handle layouts-->
       <!--hide top section for now-->
       <!-- <div>
@@ -23,7 +23,7 @@
         </div>
       </div> -->
 
-      <div class="grid grid-cols-2 gap-7 pt-20">
+      <div class="grid grid-cols-2 gap-7 pt-12">
         <div class="col-span-2 flex justify-between">
           <h1 class="font-bold text-2xl mb-0">Recent Blog Posts</h1>
           <input

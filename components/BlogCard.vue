@@ -1,5 +1,5 @@
 <template>
-  <div class="cursor-pointer group/blogcard animation-appear">
+  <div class="cursor-pointer group/blogcard mb-2">
     <!--handle image-->
     <div class="rounded-xl object-cover h-[250px] w-full mb-3 overflow-hidden">
       <img
@@ -11,7 +11,7 @@
     <!--handle blog content-->
     <div>
       <h1
-        class="text-2xl font-bold text-black mb-2 group-hover/blogcard:text-blue-900 truncate"
+        class="text-2xl font-bold text-black mb-2 group-hover/blogcard:text-green-900 truncate"
       >
         {{ props.title }}
       </h1>
