@@ -1,8 +1,7 @@
 <template>
   <div>
     <div class="mb-7">
-      <h1 class="text-2xl font-bold mb-1">Categories</h1>
-      <p class="text-gray-400 text-base">Filter By Categories</p>
+      <h1 class="text-2xl font-bold mb-1">Filter By Categories</h1>
     </div>
     <div
       v-for="category in categories"
