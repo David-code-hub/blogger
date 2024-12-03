@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full grid grid-cols-5 pr-24 mx-auto gap-12 mb-7">
+  <div class="w-full grid grid-cols-5 pr-24 mx-auto gap-12">
     <div
-      class="col-span-2 h-full border-r pl-24 border-slate-100 pt-20 bg-gray-50"
+      class="col-span-2 h-full border-r pl-24 border-slate-100 pt-20 bg-gray-50 h-screen sticky top-0"
     >
       <!--additional blog content eg filter,search,categories-->
       <HomeSidebar />
