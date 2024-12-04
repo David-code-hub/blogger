@@ -1,11 +1,11 @@
 <template>
   <div class="w-full grid grid-cols-5 pr-24 mx-auto gap-12">
     <div
-      class="col-span-2 h-full border-r pl-24 border-slate-100 pt-12 bg-gray-50 h-screen sticky top-0"
-      :class="{ hidden: !showSide }"
+      class="h-full border-r pl-24 border-slate-100 pt-12 bg-gray-50 h-screen sticky top-0"
+      :class="[!showSide ? 'col-span-1 w-[50px]' : 'col-span-2']"
     >
       <!--additional blog content eg filter,search,categories-->
-      <HomeSidebar />
+      <HomeSidebar v-if="showSide" />
       <button
         @click="showSide = !showSide"
         class="absolute right-5 border top-3 p-2 rounded-xl bg-white duration-300 hover:bg-gray-100 flex items-center"
@@ -13,10 +13,16 @@
         <Icon name="uil:arrow-left" class="text-2xl text-black" />
       </button>
     </div>
-    <div class="col-span-3 pb-12">
+    <div class="pb-12" :class="[showSide ? 'col-span-3' : 'col-span-4']">
       <!--handle layouts-->
-      <div class="grid grid-cols-2 gap-7 pt-12">
-        <div class="col-span-2 flex justify-between">
+      <div
+        class="grid gap-7 pt-12"
+        :class="[showSide ? 'grid-cols-2' : 'grid-cols-3']"
+      >
+        <div
+          class="flex justify-between mb-7"
+          :class="[showSide ? 'col-span-2' : 'col-span-3']"
+        >
           <h1 class="font-bold text-2xl mb-0">Recent Blog Posts</h1>
           <input
             placeholder="Search blogs..."
