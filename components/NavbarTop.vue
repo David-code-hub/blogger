@@ -3,10 +3,11 @@
     class="w-full py-4 px-24 flex items-center justify-between mb-0 border-b border-slate-100"
   >
     <div>
-      <p class="text-2xl font-regular">
-        <span class="px-1 text-white font-bold bg-green-900 rounded-lg mr-1"
+      <p class="text-2xl font-medium">
+        <!-- <span class="px-1 text-white font-bold bg-green-900 rounded-lg mr-1"
           >B</span
-        >logger.
+        > -->
+        Blogger. 👋
       </p>
     </div>
 
