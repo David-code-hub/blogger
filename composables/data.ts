@@ -123,3 +123,11 @@ export const categories = [
       "Learn best practices for writing clean, maintainable, and scalable Vue.js applications.",
   },
 ];
+
+export const personalDetails = {
+  name: "David",
+  subtitle: "Mark 11:23",
+  profileImage:
+    "https://i.pinimg.com/originals/cb/77/c2/cb77c2dd4276fa53087ffd74ec5a585e.jpg",
+  bio: "Hi there! I'm a full-stack dev enthustiatic about everthing UI/UX and crafting beautiful experiences.",
+};
