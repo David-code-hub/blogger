@@ -1,18 +1,20 @@
 <template>
   <div class="w-full grid grid-cols-5 pr-24 mx-auto gap-12">
     <div
-      class="h-full border-r pl-24 border-slate-100 pt-12 bg-gray-50 h-screen sticky top-0"
-      :class="[!showSide ? 'col-span-1 w-[50px]' : 'col-span-2']"
+      class="transition-all duration-300 transform h-full border-r pl-24 border-slate-100 pt-12 h-screen sticky top-0"
+      :class="[!showSide ? '-translate-x-full' : 'col-span-2']"
     >
       <!--additional blog content eg filter,search,categories-->
       <HomeSidebar v-if="showSide" />
       <button
         @click="showSide = !showSide"
-        class="absolute right-5 border top-3 p-2 rounded-xl bg-white duration-300 hover:bg-gray-100 flex items-center"
+        class="absolute border top-3 p-2 rounded-xl bg-white duration-300 hover:bg-gray-100 flex items-center"
+        :class="[showSide ? '-right-5' : '-right-12']"
       >
         <Icon name="uil:arrow-left" class="text-2xl text-black" />
       </button>
     </div>
+
     <div class="pb-12" :class="[showSide ? 'col-span-3' : 'col-span-4']">
       <!--handle layouts-->
       <div
