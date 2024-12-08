@@ -2,4 +2,4 @@
 
 This is a simple blog application built using Nuxt.js.
 
-![Screenshot 2024-12-04 at 23 51 16](https://github.com/user-attachments/assets/643061c1-edd7-44bd-b1ca-26167def06cd)
+![Screenshot 2024-12-08 at 22 54 35](https://github.com/user-attachments/assets/044f01fb-2b86-4857-9fc5-690c830ad8ed)
