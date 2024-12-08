@@ -1,31 +1,37 @@
 <template>
-  <div class="w-full grid grid-cols-5 pr-24 mx-auto gap-12">
+  <div class="w-full grid grid-cols-6 mx-auto gap-12 pr-24">
     <div
-      class="transition-all duration-300 transform h-full border-r pl-24 border-slate-100 pt-12 h-screen sticky top-0"
-      :class="[!showSide ? '-translate-x-full' : 'col-span-2']"
+      class="transition-all duration-300 bg-gray-50 transform h-full border-r-0 pl-24 pr-12 border-slate-100 pt-12 h-screen sticky top-0"
+      :class="[!showSide ? '-translate-x-full' : 'sm:col-span-2']"
     >
       <!--additional blog content eg filter,search,categories-->
       <HomeSidebar v-if="showSide" />
-      <button
+      <!-- <button
         @click="showSide = !showSide"
         class="absolute border top-3 p-2 rounded-xl bg-white duration-300 hover:bg-gray-100 flex items-center"
         :class="[showSide ? '-right-5' : '-right-12']"
       >
         <Icon name="uil:arrow-left" class="text-2xl text-black" />
-      </button>
+      </button> -->
     </div>
 
-    <div class="pb-12" :class="[showSide ? 'col-span-3' : 'col-span-4']">
+    <div
+      class="pb-12"
+      :class="[showSide ? 'col-span-6 sm:col-span-4' : 'col-span-5']"
+    >
+      <NavbarTop />
       <!--handle layouts-->
       <div
-        class="grid gap-7 pt-12"
+        class="grid gap-7 pt-12 align-center"
         :class="[showSide ? 'grid-cols-2' : 'grid-cols-3']"
       >
         <div
           class="flex justify-between mb-7"
           :class="[showSide ? 'col-span-2' : 'col-span-3']"
         >
-          <h1 class="font-bold text-2xl mb-0">Recent Blog Posts</h1>
+          <h1 class="font-regular mt-3 text-lg mb-0 leading-none">
+            Recent Blog Posts
+          </h1>
           <input
             placeholder="Search blogs..."
             v-model="search"

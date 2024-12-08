@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full py-4 px-24 flex items-center justify-between mb-0 border-b border-slate-100"
+    class="w-full rounded-xl mt-4 px-12 shadow py-4 flex items-center justify-between mb-0"
   >
     <div>
       <p class="text-2xl font-medium">
