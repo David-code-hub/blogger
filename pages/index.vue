@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full grid grid-cols-6 mx-auto gap-12 pr-24">
+  <div class="w-full grid grid-cols-6 mx-auto gap-12 sm:px-0 px-10 sm:pr-24">
     <div
-      class="transition-all duration-300 bg-gray-50 transform h-full border-r-0 pl-24 pr-12 border-slate-100 pt-12 h-screen sticky top-0"
+      class="sm:block hidden transition-all duration-300 bg-gray-50 transform h-full border-r-0 pl-24 pr-12 border-slate-100 pt-12 h-screen sticky top-0"
       :class="[!showSide ? '-translate-x-full' : 'sm:col-span-2']"
     >
       <!--additional blog content eg filter,search,categories-->
@@ -23,11 +23,12 @@
       <!--handle layouts-->
       <div
         class="grid gap-7 pt-12 align-center"
-        :class="[showSide ? 'grid-cols-2' : 'grid-cols-3']"
+        :class="[showSide ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-3']"
       >
+        <!--search-->
         <div
-          class="flex justify-between mb-7"
-          :class="[showSide ? 'col-span-2' : 'col-span-3']"
+          class="hidden sm:flex justify-between mb-7"
+          :class="[showSide ? 'sm:col-span-2' : 'col-span-3']"
         >
           <h1 class="font-regular mt-3 text-lg mb-0 leading-none">
             Recent Blog Posts
@@ -38,6 +39,7 @@
             class="border py-2 px-3 focus:border-blue-900 rounded-xl min-w-[250px] outline-none"
           />
         </div>
+        <!--end search-->
         <BlogCard
           v-for="blog in handleSearch()"
           :key="blog.title"
