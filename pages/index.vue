@@ -51,10 +51,17 @@
         <BlogCard
           v-for="a in anime"
           :key="a?.attributes?.slug"
-          :author="a.attributes.coverImage.original"
-          :title="a.attributes.canonicalTitle"
-          :blog-image="a.attributes.coverImage.original"
-          :description="a.attributes.description"
+          :author="{
+            profileImage: a?.attributes?.posterImage?.tiny,
+            name: a?.attributes?.canonicalTitle,
+            title: a?.attributes?.averageRating,
+          }"
+          :title="a?.attributes?.canonicalTitle"
+          :blog-image="
+            a?.attributes?.coverImage?.original ||
+            a?.attributes?.posterImage?.original
+          "
+          :description="a?.attributes?.synopsis.slice(0, 200) + '...'"
         />
         <div class="col-span-2" v-if="!handleSearch().length">
           <h1 class="font-semibold">No blog posts... 👀</h1>
@@ -83,7 +90,7 @@ async function getAnime() {
   try {
     const response = await fetch("https://kitsu.io/api/edge/anime");
     const data = await response.json();
-    anime.value = data;
+    anime.value = data.data;
     // console.log(data.data);
   } catch (error) {
     console.error("Error while fetching anime", error);
