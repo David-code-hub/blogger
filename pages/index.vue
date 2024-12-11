@@ -39,14 +39,22 @@
             class="border py-2 px-3 focus:border-blue-900 rounded-xl min-w-[250px] outline-none"
           />
         </div>
-        <!--end search-->
-        <BlogCard
-          v-for="blog in handleSearch()"
+        <!--end search
+          handleSearch()"
           :key="blog.title"
           :author="blog.author"
           :title="blog.title"
           :blog-image="blog.blogImage"
           :description="blog.description"
+        />
+        -->
+        <BlogCard
+          v-for="a in anime"
+          :key="a?.attributes?.slug"
+          :author="a.attributes.coverImage.original"
+          :title="a.attributes.canonicalTitle"
+          :blog-image="a.attributes.coverImage.original"
+          :description="a.attributes.description"
         />
         <div class="col-span-2" v-if="!handleSearch().length">
           <h1 class="font-semibold">No blog posts... 👀</h1>
@@ -67,4 +75,19 @@ function handleSearch() {
     item.title.toLowerCase().includes(search.value.toLowerCase())
   );
 }
+
+// test
+const anime = ref<any[]>();
+
+async function getAnime() {
+  try {
+    const response = await fetch("https://kitsu.io/api/edge/anime");
+    const data = await response.json();
+    anime.value = data;
+    // console.log(data.data);
+  } catch (error) {
+    console.error("Error while fetching anime", error);
+  }
+}
+getAnime();
 </script>
