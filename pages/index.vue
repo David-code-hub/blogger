@@ -48,7 +48,16 @@
           :description="blog.description"
         />
         -->
+
+        <div v-if="loadingAnime" class="text-center w-full mx-auto col-span-2">
+          <Icon
+            name="svg-spinners:180-ring-with-bg"
+            class="text-2xl text-black"
+          />
+          <p>loading...</p>
+        </div>
         <BlogCard
+          v-else
           v-for="a in anime"
           :key="a?.attributes?.slug"
           :author="{
@@ -76,6 +85,8 @@ import { blogs } from "../composables/data";
 
 const search = ref("");
 const showSide = ref(true);
+const anime = ref<any[]>();
+const loadingAnime = ref(false);
 
 function handleSearch() {
   return blogs.filter((item: any) =>
@@ -83,17 +94,17 @@ function handleSearch() {
   );
 }
 
-// test
-const anime = ref<any[]>();
-
 async function getAnime() {
   try {
+    loadingAnime.value = true;
     const response = await fetch("https://kitsu.io/api/edge/anime");
     const data = await response.json();
     anime.value = data.data;
     // console.log(data.data);
   } catch (error) {
     console.error("Error while fetching anime", error);
+  } finally {
+    loadingAnime.value = false;
   }
 }
 getAnime();
