@@ -29,7 +29,9 @@
           <p class="font-semibold mb-0">
             {{ props.author?.name }}
           </p>
-          <p class="text-sm text-gray-400">{{ props.author?.title }}</p>
+          <p class="text-sm text-gray-400">
+            Rating : {{ props.author?.title }}
+          </p>
         </div>
       </div>
     </div>

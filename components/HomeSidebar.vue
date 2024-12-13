@@ -1,6 +1,13 @@
 <template>
   <div>
     <div class="mb-4">
+      <a
+        href="https://kitsu.docs.apiary.io/"
+        target="_blank"
+        class="block w-max py-2 px-3 mb-4 border text-sm text-black bg-gray-100 rounded-lg"
+      >
+        Anime API
+      </a>
       <div class="flex items-center gap-2 mb-3">
         <img
           :src="personalDetails.profileImage"
