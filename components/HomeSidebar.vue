@@ -1,33 +1,33 @@
 <template>
   <div>
-    <div class="mb-4">
-      <a
-        href="https://kitsu.docs.apiary.io/"
-        target="_blank"
-        class="block w-max py-2 px-3 mb-4 border text-sm text-black bg-gray-100 rounded-lg"
-      >
-        Anime API
-      </a>
-      <div class="flex items-center gap-2 mb-3">
-        <img
-          :src="personalDetails.profileImage"
-          class="h-[50px] w-[50px] rounded-full object-cover"
-          alt="profile image"
-        />
-        <div>
-          <p class="text-lg font-semibold text-black">
-            {{ personalDetails.name }}
-          </p>
-          <p class="text-sm font-normal text-gray-400">
-            {{ personalDetails.subtitle }}
-          </p>
-        </div>
+    <div class="flex items-center gap-2 mb-3">
+      <img
+        :src="personalDetails.profileImage"
+        class="h-[50px] w-[50px] rounded-full object-cover"
+        alt="profile image"
+      />
+      <div>
+        <p class="text-lg font-semibold text-black">
+          {{ personalDetails.name }}
+        </p>
+        <p class="text-sm font-normal text-gray-400">
+          {{ personalDetails.subtitle }}
+        </p>
       </div>
-      <p class="text-sm text-gray-400 font-normal">
-        {{ personalDetails.bio }}
-      </p>
     </div>
-    <div class="mb-4">
+    <p class="text-sm text-gray-400 font-normal">
+      {{ personalDetails.bio }}
+    </p>
+  </div>
+  <div class="mt-4">
+    <a
+      href="https://kitsu.docs.apiary.io/"
+      target="_blank"
+      class="block w-max py-2 px-3 mb-4 border text-sm text-black bg-gray-100 rounded-lg"
+    >
+      Anime API
+    </a>
+    <!-- <div class="mb-4">
       <h1 class="text-sm mb-3">Let's Connect</h1>
       <div class="flex gap-1">
         <a
@@ -53,11 +53,11 @@
           <Icon name="uil:link" class="text-2xl text-black" />
         </a>
       </div>
-    </div>
-    <div class="mb-4">
+    </div> -->
+    <!-- <div class="mb-4">
       <h1 class="text-1xl font-semibold">Categories</h1>
-    </div>
-    <div class="flex flex-col">
+    </div> -->
+    <!-- <div class="flex flex-col">
       <div
         v-for="category in categories"
         :key="category.id"
@@ -74,7 +74,7 @@
           {{ category.name }}
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

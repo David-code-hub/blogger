@@ -20,11 +20,11 @@
         <Icon name="uil:github" class="text-3xl text-black" />
       </a>
 
-      <button
+      <!-- <button
         class="p-2 rounded-full duration-300 hover:bg-gray-100 flex items-center"
       >
         <Icon name="uil:sun" class="text-3xl text-black" />
-      </button>
+      </button> -->
     </div>
   </div>
 </template>
